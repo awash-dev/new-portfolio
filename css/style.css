@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* header part */
+header {
+  height: 100vh;
+  width: 300px;
+  padding: 15px 30px;
+  background: #081b5c;
+  overflow-y: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: 0.4s;
+  z-index: 99;
+
+  /* profile social icons */
+
+  .profile {
+    text-align: center;
+    margin: 10px 0;
+    /*profile imae  */
+    img {
+      border-radius: 50%;
+      border: 5px solid gray;
+    }
+    h1 {
+      color: white;
+      font-weight: 600;
+    }
+    .social-items {
+      a {
+        display: inline-block;
+        width: 36px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 37px;
+        margin: 0 2px ;
+        margin-top: 20px;
+        transition: 0.4s;
+      }
+    }
+  }
+
+  /* nav bar */
+  nav {
+    margin-top: 30px;
+    ul {
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: #ffff;
+          margin: 7px 0;
+          padding: 7px 10px;
+          font-weight: 400;
+          font-size: 15px;
+          letter-spacing: 1.5px;
+          display: inline-block;
+          i {
+            margin-right: 10px;
+            font-size: 20px;
+            transition: 0.3s;
+          }
+          &:hover {
+            color: gray;
+          }
+        }
+      }
+    }
+  }
+
+  /* footer */
+  .footer {
+    text-align: center;
+    width: 300px;
+    color: #ffff;
+    font-size: 15px;
+    letter-spacing: 0.6px;
+    bottom: 0;
+    background: #000;
+    position: fixed;
+    transition: 0.4s;
+    left: 0;
+
+    p {
+      padding: 18px 0;
+      color: #ffff;
+      a {
+        color: #ffff;
+      }
+    }
+  }
+}
+/* menu-toggle button */
+#menu-toggle {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  font-size: 25px;
+  color: #ffff;
+  width: 40px;
+  height: 40px;
+  background: #081b5c;
+  text-align: center;
+  line-height: 42px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px black;
+  z-index: 999;
+  display: none;
+}
+.mobile-nav-active header{
+    left: 0;
+}
+.mobile-nav-active .footer{
+    left: 0;
+}
+/* navigation and header responsive media Query */
+@media only screen and (max-width: 1050px) {
+  header {
+    left: -300px;
+    .footer {
+      left: -300px;
+    }
+  }
+  #menu-toggle {
+    display: block;
+  }
+}
+/* header section end */
